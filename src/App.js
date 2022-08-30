@@ -100,7 +100,7 @@ const App = () => {
             name={user.name}
             website={user.website}
             email={user.email}
-            address={user.address.street}
+            address={user?.address?.street}
             onDelete={onDelete}
           />
         ))}

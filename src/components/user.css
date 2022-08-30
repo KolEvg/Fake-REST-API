@@ -2,6 +2,8 @@
   display: grid;
   grid-template-areas: "a";
   width: 1200px;
+  height:max-content;
+  color: white;
 }
 .id{
   grid-area: a;
