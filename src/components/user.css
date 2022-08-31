@@ -1,9 +1,10 @@
 .list {
   display: grid;
   grid-template-areas: "a";
-  width: 1200px;
+  width: 1300px;
   height:max-content;
   color: white;
+  margin: 5px;
 }
 .id{
   grid-area: a;
@@ -32,7 +33,7 @@
   justify-self:start;
 }
 .buttons {
-  margin-left: 1100px;
+  margin-left: 1170px;
   grid-area: a;
   justify-self:start;
 }
