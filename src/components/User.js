@@ -8,12 +8,22 @@ const User = ({id, email, name, website, address, onDelete}) => {
     }
 
     return (
-        <div className='list'>
-            <span className='id'>{id}</span>
-            <span className='name'>{name}</span>
-            <span className='email'>{email}</span>
-            <span className='address'>{address}</span>
-            <span className='website'>{website}</span>
+        <div className='container'>
+          <div className='list'>
+            <span>{id}</span>
+          </div>
+          <div className='list'>
+            <span>{name}</span>
+          </div>
+          <div className='list'>
+            <span>{email}</span>
+          </div>
+          <div className='list'>
+            <span>{address}</span>
+          </div>
+          <div className='list'>
+            <span>{website}</span>
+          </div>
             <span className='buttons'>
                 <button>edit</button>
                 <button onClick={handleDelete}>delete</button>

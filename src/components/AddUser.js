@@ -4,7 +4,7 @@ const AddUser = ({ onAdd }) => {
 
 const handleOnSubmit = (e) => {
     e.preventDefault();
-    onAdd(e.target.name.value,e.target.email.value);
+    onAdd(e.target.name.value, e.target.email.value);
     e.target.name.value = "";
     e.target.email.value = "";
 }
