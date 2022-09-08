@@ -10,8 +10,8 @@ const User = ({ id, email, name, website, address, onDelete }) => {
   return (
     <div className='container'>
       <span className='id'>{id}</span>
-      <span>{name}</span>
-      <span>{email}</span>
+      <span className='name'>{name}</span>
+      <span className='email'>{email}</span>
       <span>{address}</span>
       <span>{website}</span>
       <span className='buttons'>
