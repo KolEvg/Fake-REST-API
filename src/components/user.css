@@ -6,7 +6,26 @@
 }
 .id {
   grid-area: a;
-  justify-self: self-start;
+  justify-self: start;
   margin-left: 100px;;
 }
-
+.name {
+  grid-area: a;
+  justify-self: self-start;
+  margin-left: 200px;;
+}
+.email {
+  grid-area: a;
+  justify-self: start;
+  margin-left: 450px;;
+}
+.address {
+  grid-area: a;
+  justify-self: start;
+  margin-left: 750px;;
+}
+.website {
+  grid-area: a;
+  justify-self: start;
+  margin-left: 950px;;
+}

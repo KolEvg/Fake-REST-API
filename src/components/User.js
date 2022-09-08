@@ -12,8 +12,8 @@ const User = ({ id, email, name, website, address, onDelete }) => {
       <span className='id'>{id}</span>
       <span className='name'>{name}</span>
       <span className='email'>{email}</span>
-      <span>{address}</span>
-      <span>{website}</span>
+      <span className='address'>{address}</span>
+      <span className='website'>{website}</span>
       <span className='buttons'>
         <button>Edit</button>
         <button onClick={handleDelete}>Delete</button>
