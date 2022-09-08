@@ -1,35 +1,25 @@
 import React from 'react'
 import './user.css'
 
-const User = ({id, email, name, website, address, onDelete}) => {
+const User = ({ id, email, name, website, address, onDelete }) => {
 
-    const handleDelete = () => {
-        onDelete(id);
-    }
+  const handleDelete = () => {
+    onDelete(id);
+  }
 
-    return (
-        <div className='container'>
-          <div className='list'>
-            <span>{id}</span>
-          </div>
-          <div className='list'>
-            <span>{name}</span>
-          </div>
-          <div className='list'>
-            <span>{email}</span>
-          </div>
-          <div className='list'>
-            <span>{address}</span>
-          </div>
-          <div className='list'>
-            <span>{website}</span>
-          </div>
-            <span className='buttons'>
-                <button>edit</button>
-                <button onClick={handleDelete}>delete</button>
-            </span>
-        </div>
-    )
+  return (
+    <div className='container'>
+      <span className='id'>{id}</span>
+      <span>{name}</span>
+      <span>{email}</span>
+      <span>{address}</span>
+      <span>{website}</span>
+      <span className='buttons'>
+        <button>Edit</button>
+        <button onClick={handleDelete}>Delete</button>
+      </span>
+    </div>
+  )
 }
 
 export default User

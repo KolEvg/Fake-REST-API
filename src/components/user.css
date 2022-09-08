@@ -1,11 +1,12 @@
 .container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-areas: "a";
   color: white;
+  width: 1200px;
 }
-.list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.id {
+  grid-area: a;
+  justify-self: self-start;
+  margin-left: 100px;;
 }
 
