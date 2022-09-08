@@ -27,5 +27,10 @@
 .website {
   grid-area: a;
   justify-self: start;
-  margin-left: 950px;;
+  margin-left: 950px;
+}
+.buttons {
+  grid-area: a;
+  justify-self: start;
+  margin-left: 1100px;
 }
