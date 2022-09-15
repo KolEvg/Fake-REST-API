@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: "a";
   color: white;
-  width: 1200px;
+  width: 1300px;
 }
 .id {
   grid-area: a;
@@ -32,5 +32,5 @@
 .buttons {
   grid-area: a;
   justify-self: start;
-  margin-left: 1100px;
+  margin-left: 1150px;
 }
