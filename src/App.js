@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
@@ -7,17 +7,15 @@ import User from "./components/User";
 const App = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetchData();
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => res.json())
+        .then((data) => setUsers(data))
+        .catch((err) => {
+          console.log(err);
+        });
   }, []);
 
-  // const fetchData = async () => {
-  //   await fetch("https://jsonplaceholder.typicode.com/users")
-  //     .then((res) => res.json())
-  //     .then((data) => setUsers(data))
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+
   //   const fetchData = async () => {
   //   axios.get('https://jsonplaceholder.typicode.com/users')
   //   .then(response => setUsers(response.data))
@@ -31,14 +29,14 @@ const App = () => {
 //         console.error(error);
 //     }
 // }
-  const fetchData = async () => {
-    try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        setUsers(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-}
+//   const fetchData = async () => {
+//     try {
+//         const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+//         setUsers(response.data);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
 
   const onAdd = async (name, email) => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -91,8 +89,8 @@ const App = () => {
     <div className="App">
       <h3>React Crud Using Jsonplaceholder</h3>
       <br />
-      <AddUser onAdd={onAdd} />
       <div>
+      <AddUser onAdd={onAdd} />
         {users.map((user) => (
           <User
             id={user.id}
