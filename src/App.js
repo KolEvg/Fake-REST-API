@@ -6,8 +6,10 @@ import User from "./components/User";
 
 const App = () => {
   const [users, setUsers] = useState([]);
+
+  const URL = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(URL)
         .then((res) => res.json())
         .then((data) => setUsers(data))
         .catch((err) => {
@@ -39,7 +41,7 @@ const App = () => {
 // }
 
   const onAdd = async (name, email) => {
-    await fetch("https://jsonplaceholder.typicode.com/users", {
+    await fetch(URL, {
       method: "POST",
       body: JSON.stringify({
         name: name,
@@ -65,7 +67,8 @@ const App = () => {
   };
 
   const onDelete = async (id) => {
-    await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+    const newURL = `https://jsonplaceholder.typicode.com/users/${id}`
+    await fetch(newURL, {
       method: "DELETE",
     })
       .then((res) => {
