@@ -67,8 +67,7 @@ const App = () => {
   };
 
   const onDelete = async (id) => {
-    const newURL = `https://jsonplaceholder.typicode.com/users/${id}`
-    await fetch(newURL, {
+    await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
       method: "DELETE",
     })
       .then((res) => {
