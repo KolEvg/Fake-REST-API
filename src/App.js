@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
-import User from "./components/User";
+import User from "./components/User"; 
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -86,7 +86,7 @@ const App = () => {
       });
   };
 
-  console.log(users);
+  // console.log(users);
   return (
     <div className="App">
       <h3>React Crud Using Jsonplaceholder</h3>
